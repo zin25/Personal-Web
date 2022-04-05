@@ -1,0 +1,118 @@
+.portfolio {
+    display: grid
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+    margin: 0 calc(var(--initial-padding)*-1);
+    padding: var(--initial-padding)
+}
+
+.card:hover {
+    background: var(--bg-active);
+    transition: .2s
+}
+
+.card:hover .tag {
+    background-color: var(--bg-main);
+    transition: .2s
+}
+
+.hero div {
+    height: 131px;
+    border-radius: var(--card-round-image)
+}
+
+.caption {
+    display: grid;
+    row-gap: 4px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-self: center
+}
+
+.title {
+    color: var(--title);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none
+}
+
+.subtitle {
+    color: var(--subtitle);
+    font-size: 15px
+}
+
+.tags {
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.tag {
+    padding: 0 6px;
+    font-size: 14px;
+    margin: 0 8px 4px 0;
+    color: var(--meta);
+    border-bottom: 1px solid var(--meta)
+}
+
+@media screen and (min-width:410px) {
+    .card {
+        column-gap: 2rem
+    }
+}
+
+@media screen and (min-width:540px) {
+    .card {
+        column-gap: 3rem;
+        margin: 0 calc(var(--medium-padding)*-1);
+        padding: var(--initial-padding) var(--medium-padding)
+    }
+    .hero div {
+        height: 140px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+        margin-top: 2rem
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        padding: 0 1.5rem 1.5rem;
+        overflow: hidden;
+        margin: 0;
+        border-radius: var(--card-round-image)
+    }
+    .card,
+    .card:hover {
+        background-color: var(--bg-tabs)
+    }
+    .card:hover .tag {
+        background-color: var(--bg-active);
+        transition: .2s
+    }
+    .hero {
+        margin: 0 -1.5rem
+    }
+    .hero div {
+        border-radius: 0
+    }
+    .caption {
+        align-self: flex-start
+    }
+    .title{
+        margin-top: 1rem;
+        font-size: 20px
+    }
+}

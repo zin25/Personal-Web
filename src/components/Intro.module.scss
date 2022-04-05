@@ -1,0 +1,137 @@
+.intro {
+    display: grid;
+    row-gap: 1rem;
+    text-align: center;
+    margin: 0 auto
+}
+
+.webtitle {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--title)
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.avatar:hover {
+    box-shadow: 0 0 0 6px var(--btn-text);
+    transition: .2s
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: .2rem
+    
+}
+
+.icon {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 20%;
+    padding: 8px;
+    background: var(--bg-tabs)
+}
+
+.icon :hover {
+    box-shadow: 0 0 0 6px var(--btn-text);
+    transition: .2s
+}
+
+.bio {
+    text-align: center;
+    color: var(--title)
+}
+
+.highlight {
+    font-weight: 500;
+    text-decoration: underline;
+    color: var(--icon-white)
+}
+
+.highlight:hover {
+    text-decoration: none;
+    transition: .2s
+}
+
+.hibutton {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    background: var(--btn-solid);
+    text-align: center;
+    color: var(--icon-white);
+    text-decoration: none;
+    border-radius: 24px
+}
+
+.hibutton:hover {
+    background: var(--icon-black);
+    transition: .2s
+}
+
+@media screen and (min-width:400px) {
+    .intro {
+        max-width: 400px
+    }
+    .avatar {
+        width: 120px;
+        height: 120px
+    }
+    .socials {
+        column-gap: 1rem
+    }
+}
+
+@media screen and (min-width:540px) {
+    .intro {
+        max-width: 500px;
+        row-gap: 1.5rem;
+        padding: 0 6vw
+    }
+    .hibutton {
+        padding: .6rem
+    }
+}
+
+@media screen and (min-width:768px) {
+    .intro {
+        max-width: 650px;
+        padding: 0 8rem
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .intro {
+        padding: 0;
+        text-align: left;
+        height: fit-content;
+        height: fit content;
+        height: fit-content;
+        max-width: 300px
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+        margin-right: 1rem
+    }
+    .bio {
+        text-align: left
+    }
+    .socials {
+        column-gap: .5rem
+    }
+}

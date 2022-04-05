@@ -1,0 +1,50 @@
+.tabs {
+    background: var(--bg-tabs);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    border-radius: 28px;
+    padding: 6px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+.tab {
+    padding: 8px 0;
+    border-radius: 24px;
+    text-decoration: none;
+    color: var(--icon-white);
+    display: flex;
+    justify-content: center
+}
+
+.tab:hover {
+    background: var(--btn-text);
+    transition: .2s
+}
+
+.icon {
+    width: 24px
+}
+
+.tab span {
+    display: none
+}
+
+@media screen and (min-width:768px) {
+    .tab,
+    .tabs {
+        border-radius: 3rem
+    }
+    .tabs {
+        padding: .5rem
+    }
+    .tab {
+        padding: 1rem 0
+    }
+    .tab span {
+        display: inline;
+        margin-left: 1rem
+    }
+}

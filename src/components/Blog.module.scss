@@ -1,0 +1,13 @@
+.blog {
+    display: grid;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+@media screen and (min-width:1024px) {
+    .blog {
+        margin-top: 2rem;
+        row-gap: 1rem
+    }
+}

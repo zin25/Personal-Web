@@ -1,0 +1,128 @@
+.card{
+    display: grid;
+    margin: 0 calc(var(--initial-padding)*-1);
+    padding: var(--initial-padding)
+}
+
+.card .line {
+    display: none
+}
+
+.card :hover {
+    background-color: var(--bg-active);
+    transition: .2s
+}
+
+.blogpost {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    column-gap: 1.5rem
+}
+
+.caption {
+    display: grid;
+    row-gap: .2rem;
+    display: block
+}
+
+.header {
+    font-size: 15px;
+    color: var(--meta)
+}
+
+.category {
+    color: var(--meta);
+    font-weight: 500
+}
+
+.titles {
+    text-decoration: none
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--title);
+    margin-bottom: .2rem
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--subtitle)
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    display: block
+}
+
+.hero div {
+    border-radius: var(--card-round-image);
+    height: 160px
+}
+
+.line {
+    width: 88%;
+    border: none;
+    background-color: var(--bg-tabs);
+    height: 2px;
+    transition: .2s
+}
+
+@media screen and (min-width:410px) {
+    .blogpost {
+        column-gap: 2rem
+    }
+}
+
+@media screen and (min-width:540px) {
+    .blogpost {
+        column-gap: 3rem
+    }
+    .card {
+        margin: 0 calc(var(--medium-padding)*-1);
+        padding: var(--initial-padding) var(--medium-padding)
+    }
+}
+
+@media screen and (min-width:768px) {
+    .card {
+        padding: 2rem var(--medium-padding)
+    }
+    .header {
+        font-size: 16px
+    }
+    .title {
+        font-size: 24px
+    }
+    .subtitle {
+        font-size: 18px
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .card {
+        margin: 0;
+        padding: 0;
+        grid-gap: 1rem;
+        border-radius: 1rem
+    }
+    .card:hover {
+        padding-top: .5rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        transition: .2s
+    }
+    .card :hover .line {
+        width: 98%
+    }
+    .card .blogpost {
+        column-gap: 2rem
+    }
+    .card .line {
+        display: block
+    }
+}
